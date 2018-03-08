@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import logo from '../images/logo.svg';
+
 class Header extends Component {
 
   // these links can be conditional
@@ -14,12 +16,15 @@ class Header extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-light">
-        <Link to="/" className="navbar-brand">Redux Home</Link>
-        <ul className="nav navbar-nav">
-        {this.renderLinks()}
-        </ul>
-      </nav>
+      <div>
+        <img className="logo" src={logo} />
+        <nav className="navbar navbar-light">
+          <Link to="/" className="navbar-brand">Redux Home</Link>
+          <ul className="nav navbar-nav">
+          {this.renderLinks()}
+          </ul>
+        </nav>
+      </div>
     );
   }
 }
