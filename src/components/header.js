@@ -20,7 +20,7 @@ class Header extends Component {
   // these links can be conditional
   renderLinks() {
     return [
-      <Menu.Item className="nav-item" key={1}>
+      <Menu.Item className="nav-item" key={2}>
         <Link className="nav-link" to="/Page2">Page-2</Link>
       </Menu.Item>
     ];
@@ -29,7 +29,7 @@ class Header extends Component {
   render() {
     return (
       <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
-         <Menu.Item className="nav-item" key={2}>
+         <Menu.Item className="nav-item" key={1}>
            <Link to="/" className="navbar-brand">Redux Home</Link>
           </Menu.Item>
           {this.renderLinks()}
